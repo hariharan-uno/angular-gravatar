@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="grApp">
+  <head>
+    <title>Gravatar App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div ng-controller="SimpleController">
+	Email: <input type="text" ng-model="email"/><br>
+	{{email}}
+	<br>
+	<img src="http://www.gravatar.com/avatar/{{ HASH }}"><br>
+ 	<button ng-click="fetchImage()">Fetch Image</button>
+      </div>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="md5.js"></script>
+    <script src="simplecontroller.js"></script>
+  </body>
+</html>
